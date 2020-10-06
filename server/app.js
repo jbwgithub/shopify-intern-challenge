@@ -3,7 +3,7 @@ const morgan = require("morgan");
 const path = require("path");
 
 //For DB:
-const { db } = require("./models");
+const db = require("./db");
 
 const app = express();
 
@@ -14,6 +14,15 @@ app.use(express.urlencoded({ extended: false }));
 
 // static file-serving middleware
 app.use(express.static(path.join(__dirname, "..", "public")));
+
+// authentication router
+// app.use('/auth', require('./auth'))
+
+// For all GET requests that aren't to an API route,
+// we will send the index.html!
+app.get('/*', (req, res, next) => {
+  res.sendFile(path.join(__dirname, '..', './public/index.html'))
+})
 
 // catch 404 (i.e., no route was hit) and forward to error handler
 app.use(function (req, res, next) {
