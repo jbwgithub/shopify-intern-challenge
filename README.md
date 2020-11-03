@@ -1,6 +1,7 @@
-This application was not complete.
+This application was not completed.
 
 React App documentation below:
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
