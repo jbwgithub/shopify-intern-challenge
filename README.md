@@ -1,3 +1,7 @@
+This application was not complete.
+
+React App documentation below:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
